@@ -13,6 +13,7 @@ import LanguagesForm from "./components/forms/LanguagesForm";
 import CertificatesForm from "./components/forms/CertificatesForm";
 import ProjectsForm from "./components/forms/ProjectsForm";
 import PhotoUpload from "./components/forms/PhotoUpload";
+import PersonalProfileForm from "./components/forms/PersonalProfileForm" 
 import CVPreview from "./components/CVPreview";
 import { exportCVToPDF } from "./services/pdfService";
 
@@ -84,6 +85,7 @@ export default function App() {
             <div className="panel-content form-panel">
               <PhotoUpload />
               <PersonalForm />
+             <PersonalProfileForm />
               <SummaryForm />
               <ExperienceForm />
               <EducationForm />

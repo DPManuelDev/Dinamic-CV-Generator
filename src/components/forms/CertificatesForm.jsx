@@ -14,9 +14,12 @@ export default function CertificatesForm() {
         <div className="entry-card" key={item.id}>
           <button className="delete-btn" onClick={() => removeItem("certificates", item.id)}><Trash2 size={15} /></button>
           <div className="field-grid">
-            <label>Certificado<input value={item.name} placeholder="Nome do certificado" onChange={e => updateItem("certificates", item.id, "name", e.target.value)} /></label>
-            <label>Instituição<input value={item.institution} placeholder="Instituição" onChange={e => updateItem("certificates", item.id, "institution", e.target.value)} /></label>
-            <label>Ano<input value={item.year} placeholder="2025" onChange={e => updateItem("certificates", item.id, "year", e.target.value)} /></label>
+            <label>Certificado<input value={item.name} placeholder="Nome do certificado" onChange={e => updateItem("certificates", item.id, "name", e.target.value)} />
+            </label>
+            <label>Instituição<input value={item.institution} placeholder="Instituição" onChange={e => updateItem("certificates", item.id, "institution", e.target.value)} />
+            </label>
+            <label>Ano<input value={item.year} placeholder="2025" onChange={e => updateItem("certificates", item.id, "year", e.target.value)} />
+            </label>
           </div>
         </div>
       ))}
