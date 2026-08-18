@@ -85,7 +85,7 @@ export default function App() {
             <div className="panel-content form-panel">
               <PhotoUpload />
               <PersonalForm />
-             <PersonalProfileForm />
+              <PersonalProfileForm />
               <SummaryForm />
               <ExperienceForm />
               <EducationForm />
@@ -93,7 +93,7 @@ export default function App() {
               <LanguagesForm />
               <CertificatesForm />
               <ProjectsForm />
-              <button className="primary-btn full" onClick={handlePDF} disabled={exporting}>
+              <button className="primary-btn full" onClick = {handlePDF} disabled={exporting}>
                 <Download size={17} />
                 {exporting ? "A preparar PDF..." : "Exportar CV em PDF"}
               </button>

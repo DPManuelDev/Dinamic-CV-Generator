@@ -1,3 +1,5 @@
+
+
 import React from "react";
 export function SectionTitle({ children, color, minimal = false }) {
   return <h2 className={`cv-section-title ${minimal ? "minimal" : ""}`} style={{ color }}>{children}</h2>;

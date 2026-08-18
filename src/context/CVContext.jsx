@@ -1,3 +1,4 @@
+
 import { createContext, useContext, useMemo, useState } from "react";
 import React from "react";
 const initialState = {
@@ -21,6 +22,7 @@ const initialState = {
     resumo: true,
     experiencia: true,
     formacao: true,
+    perfil: true,
     habilidades: true,
     idiomas: false,
     certificados: false,
