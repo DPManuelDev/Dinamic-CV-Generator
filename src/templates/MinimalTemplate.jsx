@@ -13,11 +13,21 @@ export default function MinimalTemplate({ state }) {
           <ContactLine state={state} />
         </div>
       </header>
-      {state.sections.resumo && state.summary && <section className="cv-summary">{state.summary}</section>}
+      {state.sections.resumo && state.summary && <section className="cv-summary"> {state.summary}</section>}
       <Entries state={state} />
+
+      {state.sections.perfil && state.profile && <section className="cv-summary"> {state.summary}</section>}
+      <Entries state={state} />
+
       <div className="minimal-bottom">
-        {state.sections.habilidades && <section><SectionTitle color="#222" minimal>Habilidades</SectionTitle><Skills text={state.skills} color={state.accent} /></section>}
-        {state.sections.idiomas && <section><SectionTitle color="#222" minimal>Idiomas</SectionTitle><Languages text={state.languages} /></section>}
+        {state.sections.habilidades && <section>
+          <SectionTitle color="#222" minimal> Habilidades </SectionTitle>
+          <Skills text={state.skills} color={state.accent} /></section>
+          }
+        {state.sections.idiomas && <section>
+          <SectionTitle color="#222" minimal> Idiomas </SectionTitle>
+          <Languages text={state.languages} /></section>
+          }
       </div>
     </div>
   );

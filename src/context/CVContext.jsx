@@ -15,6 +15,7 @@ const initialState = {
   },
   photo: "",
   summary: "",
+  profile: "",
   skills: "",
   languages: "",
   sections: {

@@ -24,6 +24,17 @@ export default function App() {
 
   const go = (next) => setTab(next);
 
+  function verificarName(){
+    if(state.personal.name.trim()==="" || state.personal.phone.trim()==="" 
+    || state.personal.location.trim()===""){
+      alert("É vivamente recomendado que preencha os seguintes campos:Nome, Telefon, Localizção")
+    return
+  }
+    else{
+      handlePDF()
+    }
+
+  }
   const handlePDF = async () => {
     setExporting(true);
     try {
@@ -43,20 +54,21 @@ export default function App() {
             <small>Crie um currículo profissional em poucos minutos</small>
           </div>
         </div>
-        <button className="top-download" onClick={handlePDF} disabled={exporting}>
-          <Download size={17} />
+        <button className="top-download" onClick={handlePDF, verificarName} disabled={exporting}>
+          <Download size={17}  />
           {exporting ? "A preparar..." : "Baixar PDF"}
         </button>
       </header>
 
       <section className="builder">
+
         <aside className="sidebar">
           <nav className="step-tabs" aria-label="Etapas">
             <button className={tab === "modelo" ? "active" : ""} onClick={() => go("modelo")}>
               <Palette size={15} /> Modelo
             </button>
             <button className={tab === "secoes" ? "active" : ""} onClick={() => go("secoes")}>
-              Seções
+              Secções
             </button>
             <button className={tab === "dados" ? "active" : ""} onClick={() => go("dados")}>
               Dados
@@ -74,7 +86,7 @@ export default function App() {
 
           {tab === "secoes" && (
             <div className="panel-content">
-              <SectionSelector />
+              <SectionSelector/>
               <div className="panel-actions">
                 <button className="primary-btn" onClick={() => go("dados")}>Próximo: Preencher dados →</button>
               </div>
