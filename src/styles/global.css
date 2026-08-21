@@ -249,21 +249,30 @@ button:focus-visible,input:focus-visible,textarea:focus-visible{
     color:#777582;
     margin-bottom:8px
 }
-.field-grid{display:grid;gap:8px}
+.field-grid{display:grid;
+    gap:8px
+}
 .field-grid input,.field-grid textarea,.form-section>label textarea{
     width:100%;
     border:1px solid #dedde5;
     background:#fff;
     border-radius:9px;
     padding:9px 10px;
-    font-size:12px;
+    font-size:14px;
     color:#2d2b35;
     margin-top:4px
 }
 .field-grid textarea,.form-section>label textarea{
     min-height:70px;
-    resize:vertical}.field-help{font-size:10px;color:#999}
-    .entry-card{position:relative;
+    resize:vertical
+}
+    
+    .field-help{
+        font-size:10px;
+        color:#999
+    }
+    .entry-card{
+        position:relative;
         background:#fff;
         border:1px solid #e5e4ea;
         border-radius:10px;
@@ -282,7 +291,8 @@ button:focus-visible,input:focus-visible,textarea:focus-visible{
         place-items:center;
         cursor:pointer
     }
-    .add-btn{display:inline-flex;
+    .add-btn{
+        display:inline-flex;
         align-items:center;
         gap:5px;
         background:transparent;
@@ -293,7 +303,8 @@ button:focus-visible,input:focus-visible,textarea:focus-visible{
         margin-top:3px
     }
     /*////////////////Photo box formating/////////////////////*/
-    .photo-box{display:grid;
+    .photo-box{
+        display:grid;
         grid-template-columns:64px 1fr;
         gap:8px;
         align-items:center
@@ -318,7 +329,8 @@ button:focus-visible,input:focus-visible,textarea:focus-visible{
         cursor:pointer;
         color:#45434d!important
     }
-    .remove-photo{grid-column:2;
+    .remove-photo{
+        grid-column:2;
         width:max-content;
         background:transparent;
         color:#c74d5a;
@@ -329,7 +341,8 @@ button:focus-visible,input:focus-visible,textarea:focus-visible{
         cursor:pointer
     }
     /*////////////////Preview panel formatting//////////////////////*/
-.preview-panel{background:#f2f3f7;
+.preview-panel{
+    background:#f2f3f7;
     overflow:auto;
     padding:26px
 }
@@ -339,7 +352,8 @@ button:focus-visible,input:focus-visible,textarea:focus-visible{
     align-items:flex-start;
     margin-bottom:20px
 }
-.eyebrow{display:inline-flex;
+.eyebrow{
+    display:inline-flex;
     align-items:center;
     gap:5px;
     color:#6c63ff;
@@ -348,7 +362,10 @@ button:focus-visible,input:focus-visible,textarea:focus-visible{
     text-transform:uppercase;
     letter-spacing:.08em
 }
-.preview-heading h1{font-size:18px;margin-top:5px}
+.preview-heading h1{
+    font-size:18px;
+    margin-top:5px
+}
 .live-badge{background:#fff;
     border:1px solid #e5e4ea;
     color:#7b7984;

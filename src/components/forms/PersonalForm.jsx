@@ -5,27 +5,22 @@ import FormSection from "./FormSection";
 //import {emailValido} from "../../context/EmailVerification.jsx"
 
 
-
 export default function PersonalForm() {
   const { state, updatePersonal } = useCV();
   if (!state.sections.pessoal) return null;
   const p = state.personal;
 
 ////////////////////////////////////
-
 const emailValidator = (e) => {
 const email= e.target.value
-//const erro = ""
-
- const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
         if (!regex.test(email)){
-          const  erro = ("Digite um e-mail válido.")
+           const setErro = ("Digite um e-mail válido.")
             return
         }
         alert("E-mail válido")
     }
-
 ///////////////////////////////////////
 
   return (
@@ -37,8 +32,8 @@ const email= e.target.value
         <label>Cargo / Título<input value={p.title} placeholder="Ex: Engenheira de Software" onChange={e => updatePersonal("title", e.target.value)} /></label>
 
         <label > Email<input id="email-imput" type="email" value={p.email} 
-        placeholder="fulano@gmail.com" onChange  = {e => updatePersonal ("email", e.target.value)}
-        onBlur ={emailValidator} />
+        placeholder="fulano@gmail.com" onChange  = {e => updatePersonal ("email", e.target.value)} 
+        />
 
         </label>
         <label>Telefone<input value = {p.phone} placeholder="+244 900 000 000" onChange={e => updatePersonal("phone", e.target.value)} required/>

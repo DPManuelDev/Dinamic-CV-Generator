@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import { Download, Eye, FileText, Palette } from "lucide-react";
+import { Download, Eye, FileText, Palette,Undo2, Redo2 } from "lucide-react";
 import { useCV } from "./context/CVContext";
 import TemplateSelector from "./components/TemplateSelector";
 import SectionSelector from "./components/SectionSelector";
@@ -20,7 +20,11 @@ import { exportCVToPDF } from "./services/pdfService";
 export default function App() {
   const [tab, setTab] = useState("modelo");
   const [exporting, setExporting] = useState(false);
-  const { state } = useCV();
+
+  const { state, undo,
+          redo, canUndo, 
+          canRedo
+   } = useCV();
 
   const go = (next) => setTab(next);
 
@@ -53,8 +57,18 @@ export default function App() {
             <strong>Criador de CV</strong>
             <small>Crie um currículo profissional em poucos minutos</small>
           </div>
+          <div className="history-buttons">
+            <button onClick={undo} disabled={!canUndo}
+            title="Desfazer (Ctrl + Z)">
+              <Undo2 size={15}></Undo2>
+            </button>
+            <button onClick={redo} disabled={!canRedo}
+              title="Refazer (Ctrl + Y)">
+                <Redo2 size={15}></Redo2>
+              </button>
+          </div>
         </div>
-        <button className="top-download" onClick={handlePDF, verificarName} disabled={exporting}>
+        <button className="top-download" onClick={verificarName} disabled={exporting}>
           <Download size={17}  />
           {exporting ? "A preparar..." : "Baixar PDF"}
         </button>
