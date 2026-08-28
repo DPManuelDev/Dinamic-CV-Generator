@@ -45,15 +45,17 @@ button:focus-visible,input:focus-visible,textarea:focus-visible{
 .brand strong{display:block;
     font-size:15px
 }
-.brand small{display:block;
+.brand small{
+    display:block;
     color:#888693;
     font-size:11px;
     margin-top:2px
 }
-.top-download,.primary-btn{background:#6c63ff;
+.top-download,.primary-btn{
+    background:#6c63ff;
     color:#fff;
     border-radius:10px;
-    padding:10px 15px;
+    padding:10px 5px;
     display:inline-flex;
     align-items:center;
     justify-content:center;
@@ -62,6 +64,30 @@ button:focus-visible,input:focus-visible,textarea:focus-visible{
     cursor:pointer;
     transition:.2s
 }
+.top-download{
+     margin-left: 700px;
+}
+.history-buttons{
+padding: auto;
+margin: 10px;
+
+}
+.btn-undo, .btn-redu{
+    gap: 5px;
+    padding: 2px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #f0ebeb;
+    transition: 2s;
+    margin-left: auto;
+    display: flex;
+    
+}
+.btn-undo,.btn-redu:hover{
+     background-color: #5c59594f;
+}
+
 .top-download:hover,.primary-btn:hover{filter:brightness(.94);
     transform:translateY(-1px)
 }

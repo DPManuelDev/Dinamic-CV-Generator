@@ -36,7 +36,7 @@ const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
         />
 
         </label>
-        <label>Telefone<input value = {p.phone} placeholder="+244 900 000 000" onChange={e => updatePersonal("phone", e.target.value)} required/>
+        <label>Telefone <input value = {p.phone} placeholder="+244 900 000 000" onChange={e => updatePersonal("phone", e.target.value)} required/>
         </label>
         <label>Localização<input value={p.location} placeholder="Luanda, Angola" onChange={e => updatePersonal("location", e.target.value)} required/>
         </label>

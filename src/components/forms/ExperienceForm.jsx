@@ -14,10 +14,15 @@ export default function ExperienceForm() {
         <div className="entry-card" key={item.id}>
           <button className="delete-btn" onClick={() => removeItem("experiences", item.id)}><Trash2 size={15} /></button>
           <div className="field-grid">
-            <label>Cargo<input value={item.role} placeholder="Cargo" onChange={e => updateItem("experiences", item.id, "role", e.target.value)} /></label>
-            <label>Empresa<input value={item.company} placeholder="Empresa" onChange={e => updateItem("experiences", item.id, "company", e.target.value)} /></label>
-            <label>Período<input value={item.period} placeholder="Jan 2022 – Atual" onChange={e => updateItem("experiences", item.id, "period", e.target.value)} /></label>
-            <label>Descrição<textarea value={item.description} placeholder="Descrição das atividades..." onChange={e => updateItem("experiences", item.id, "description", e.target.value)} /></label>
+            <label>Cargo<input value={item.role} placeholder="Cargo" onChange={e => updateItem("experiences", item.id, "role", e.target.value)} />
+            </label>
+            <label>Empresa<input value={item.company} placeholder="Empresa" onChange={e => updateItem("experiences", item.id, "company", e.target.value)} />
+            </label>
+            <label>Período<input value={item.period} placeholder="Jan 2022 – Atual" onChange={e => updateItem("experiences", item.id, "period", e.target.value)} />
+            </label>
+            <label>Descrição<textarea value = {item.description} placeholder="Descrição das atividades..." onChange={e => updateItem("experiences", item.id, "description", e.target.value)} />
+
+            </label>
           </div>
         </div>
       ))}

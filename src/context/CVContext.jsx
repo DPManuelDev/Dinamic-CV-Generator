@@ -39,9 +39,12 @@ const initialState = {
 const CVContext = createContext(null);
 
 export function CVProvider({ children }) {
-  //ESTADO ACTUAL DO CV
+ //////////////// //ESTADO ACTUAL DO CV //////////////////
+
   const [state, setState] = useState(initialState);
-//HISTÓRICO ANTERIOR 
+
+///////////////////////HISTÓRICO ANTERIOR//////////////////// 
+
    const [past, setPaste]= useState([])
 
    //HISTÓRICO FUTURO 
@@ -54,7 +57,9 @@ export function CVProvider({ children }) {
     setPaste((p) =>[...p, state])
 
     setState(newState)
-    //whatever alteration will delete the redo
+
+    ///////////whatever alteration will delete the redo
+
     setFuture([])
   }
   

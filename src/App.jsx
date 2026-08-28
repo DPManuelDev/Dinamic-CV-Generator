@@ -17,6 +17,7 @@ import PersonalProfileForm from "./components/forms/PersonalProfileForm"
 import CVPreview from "./components/CVPreview";
 import { exportCVToPDF } from "./services/pdfService";
 
+
 export default function App() {
   const [tab, setTab] = useState("modelo");
   const [exporting, setExporting] = useState(false);
@@ -37,16 +38,29 @@ export default function App() {
     else{
       handlePDF()
     }
-
+  }/*
+function VerifyExperience(){
+if(state.ExperienceForm.item.cargo.trim() === " "){
+  alert("O teu CV deve ter no minimo uma experincia de Trabalho")
+  return
+}
+  else{
+    handlePDF
   }
+    */
+
+
+
   const handlePDF = async () => {
     setExporting(true);
     try {
-      await exportCVToPDF("cv-print-area", state.personal.name || "meu-cv");
+      await exportCVToPDF("cv-print-area", state.personal.name || "meu-cv" );
     } finally {
       setExporting(false);
     }
   };
+
+
 
   return (
     <main className="app-shell">
@@ -57,21 +71,24 @@ export default function App() {
             <strong>Criador de CV</strong>
             <small>Crie um currículo profissional em poucos minutos</small>
           </div>
+
           <div className="history-buttons">
-            <button onClick={undo} disabled={!canUndo}
+            <button className="btn-undo" onClick={undo} disabled={!canUndo}
             title="Desfazer (Ctrl + Z)">
               <Undo2 size={15}></Undo2>
             </button>
-            <button onClick={redo} disabled={!canRedo}
+            <button className="btn-redu" onClick={redo} disabled={!canRedo}
               title="Refazer (Ctrl + Y)">
                 <Redo2 size={15}></Redo2>
               </button>
-          </div>
+       
         </div>
-        <button className="top-download" onClick={verificarName} disabled={exporting}>
-          <Download size={17}  />
+        
+        <button className="top-download" disabled={exporting}  onClick={verificarName}>
+          <Download size={17} />
           {exporting ? "A preparar..." : "Baixar PDF"}
         </button>
+        </div>
       </header>
 
       <section className="builder">

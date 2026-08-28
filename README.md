@@ -17,11 +17,11 @@ Este projecto está a ser desenvolvido para servir como um suporte para pessoas 
 - Preview em tempo real
 - Escolha de cor de destaque
 - Exportação para PDF A4
+- Undo
+- Redo 
 ## Caracteristicas à implementar
--  undo
--  Redo
 -  Duplicate
--  Exporting cv to social
--  Update existint
+-  Exportação para Redes Sociais
+-  Actualizar CVs existentes
 -  Criação de mais templates
 ## Implementação de um bakend
