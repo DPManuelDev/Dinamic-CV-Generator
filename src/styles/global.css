@@ -1,4 +1,5 @@
-*{box-sizing:border-box;
+*{
+    box-sizing:border-box;
     margin:0;
     padding:0
 }
@@ -15,12 +16,14 @@ button:focus-visible,input:focus-visible,textarea:focus-visible{
     outline:3px solid rgba(108,99,255,.2);
     outline-offset:1px
 }
-.app-shell{width:min(1500px,100%);
+.app-shell{
+    width:min(1500px,100%);
     margin:0 auto;
     min-height:100vh;
     padding:18px
 }
-.topbar{height:68px;
+.topbar{
+    height:68px;
     background:#fff;
     border:1px solid #e9e9ef;
     border-radius:18px 18px 0 0;
@@ -30,7 +33,8 @@ button:focus-visible,input:focus-visible,textarea:focus-visible{
     padding:0 20px;
     box-shadow:0 8px 28px rgba(30,31,40,.04)
 }
-.brand{display:flex;
+.brand{
+    display:flex;
     align-items:center;
     gap:11px
 }
@@ -72,7 +76,7 @@ padding: auto;
 margin: 10px;
 
 }
-.btn-undo, .btn-redu{
+.btn-undo,.btn-redu{
     gap: 5px;
     padding: 2px;
     margin: 5px;
@@ -106,10 +110,11 @@ margin: 10px;
     box-shadow:0 18px 45px rgba(30,31,40,.07)
 }
 
-.sidebar{background:#fbfbfd;
+.sidebar{
+    background:#fbfbfd;
     border-right:1px solid #e9e9ef;
     overflow:auto;
-    max-height: 150vh;
+    max-height: 160vh;
 }
 .step-tabs{display:grid;
     grid-template-columns:repeat(3,1fr);
@@ -227,7 +232,9 @@ margin: 10px;
 .full{width:100%;
     margin-top:18px
 }
-.section-list{display:grid;gap:8px}
+.section-list{display:grid;
+    gap:8px
+}
 .section-toggle{display:flex;
     align-items:center;
     justify-content:space-between;
@@ -275,7 +282,8 @@ margin: 10px;
     color:#777582;
     margin-bottom:8px
 }
-.field-grid{display:grid;
+.field-grid{
+    display:grid;
     gap:8px
 }
 .field-grid input,.field-grid textarea,.form-section>label textarea{
@@ -328,7 +336,7 @@ margin: 10px;
         cursor:pointer;
         margin-top:3px
     }
-    /*////////////////Photo box formating/////////////////////*/
+    /*////////////////PHOTO BOX FORMATING/////////////////////*/
     .photo-box{
         display:grid;
         grid-template-columns:64px 1fr;
@@ -366,7 +374,7 @@ margin: 10px;
         align-items:center;
         cursor:pointer
     }
-    /*////////////////Preview panel formatting//////////////////////*/
+    /*////////////////PREVIEW PANEL FORMATING//////////////////////*/
 .preview-panel{
     background:#f2f3f7;
     overflow:auto;
@@ -406,26 +414,29 @@ margin: 10px;
     padding:18px
 }
 .cv-paper-wrap{width:min(100%,850px)}
-.cv-paper{background:#fff;
+.cv-paper{
+    background:#fff;
     width:794px;
     min-height:1123px;
     margin:0 auto;
     box-shadow:0 18px 45px rgba(28,28,35,.14);
     transform-origin:top center
 }
-/*/////////////General CV FORMATTING/////////////*/
+/*/////////////General CV FORMATTING////////////////*/
 .cv{width:100%;
     min-height:1123px;
     background:#fff;
     color:#27262c;
     font-family:Arial,sans-serif;
-    font-size:11px
+    font-size:12px
 }
-.cv-name{font-size:23px;
+.cv-name{
+    font-size:23px;
     font-weight:800;
     line-height:1.1
 }
-.cv-title{font-size:11px;
+.cv-title{
+    font-size:12px;
     color:#6f6d77;
     margin-top:5px
 }
@@ -445,13 +456,14 @@ margin: 10px;
 .cv-contact{display:flex;
     flex-wrap:wrap;
     gap:5px 14px;
-    font-size:9px;
+    font-size:12px;
     color:#777580;
     margin-top:9px
 }
 .cv-contact.light{color:rgba(255,255,255,.82)}
 .cv-section{margin-bottom:22px}
-.cv-section-title{font-size:10px;
+.cv-section-title{
+    font-size:12px;
     text-transform:uppercase;
     letter-spacing:.12em;
     margin-bottom:10px;
@@ -461,10 +473,12 @@ margin: 10px;
     border-left:3px solid currentColor;
     padding-left:8px
 }
-.cv-section-title.minimal{border-bottom:1px solid #ddd;
+.cv-section-title.minimal{
+    border-bottom:1px solid #ddd;
     padding-bottom:5px
 }
-.cv-summary{font-size:10.5px;
+.cv-summary{
+    font-size:10.5px;
     line-height:1.7;
     color:#5f5d66;
     margin-bottom:20px;
@@ -472,32 +486,43 @@ margin: 10px;
     border-bottom:1px solid #eee
 }
 .cv-entry{margin-bottom:13px}
-.cv-entry-head{display:flex;
+
+.cv-entry-head{
+    display:flex;
     justify-content:space-between;
     gap:12px;
     align-items:baseline
 }
 .cv-entry-head strong{font-size:11px}
 .cv-entry-head span{font-size:9px;color:#999}
-.cv-entry-company{font-size:10px;
+.cv-entry-company{
+    font-size:11px;
     font-weight:700;
     margin-top:2px
 }
-.cv-entry p{font-size:9.5px;
+.cv-entry p{
+    font-size:9.5px;
     line-height:1.55;
     color:#666;
     margin-top:4px
 }
-.cv-tags{display:flex;flex-wrap:wrap;gap:4px}
+.cv-tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:4px
+}
+
 .cv-tags span{font-size:9px;
     padding:4px 7px;
     border-radius:999px;
     border:1px solid
 }
-.cv-list{padding-left:14px;
+.cv-list{
+    padding-left:14px;
     color:#555
 }
-.cv-list li{font-size:10px;
+.cv-list li{
+    font-size:10px;
     margin-bottom:4px
 }
 .side-block{margin-top:22px}
@@ -509,18 +534,21 @@ margin: 10px;
     padding:38px 24px
 }
 .classic-side .cv-photo{margin:0 auto 14px}
-.classic-side .cv-name{text-align:center;
+.classic-side .cv-name{
+    text-align:center;
     font-size:18px
 }
 .classic-side .cv-title{text-align:center;color:#aaa}
-.classic-side .cv-contact{display:grid;
+.classic-side .cv-contact{
+    display:grid;
     gap:7px;
     margin-top:18px
 }
 .classic-side .cv-section-title{font-size:9px}
 .classic-side .cv-list{color:#d0d0d0}
 .classic-main{padding:38px 30px}
-.modern-head{padding:38px 42px;
+.modern-head{
+    padding:38px 42px;
     color:#fff;
     display:flex;
     justify-content:space-between;
@@ -546,7 +574,8 @@ margin: 10px;
     margin-bottom:23px
 }
 .minimal-photo{width:76px;height:76px}
-.minimal-bottom{display:grid;
+.minimal-bottom{
+    display:grid;
     grid-template-columns:1fr 1fr;
     gap:25px
 }
@@ -605,5 +634,9 @@ margin: 10px;
     .builder{display:block;border:0;box-shadow:none}
     .preview-panel{padding:0;background:#fff}
     .preview-stage{padding:0}
-    .cv-paper{box-shadow:none;margin:0;transform:none}
+    .cv-paper{
+        box-shadow:none;
+        margin:0;
+        transform:none
+    }
 }

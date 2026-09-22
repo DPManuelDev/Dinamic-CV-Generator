@@ -30,9 +30,9 @@ export default function App() {
   const go = (next) => setTab(next);
 
   function verificarName(){
-    if(state.personal.name.trim()==="" || state.personal.phone.trim()==="" 
-    || state.personal.location.trim()===""){
-      alert("É vivamente recomendado que preencha os seguintes campos:Nome, Telefon, Localizção")
+    if(state.personal.name.trim() ==="" || state.personal.phone.trim()==="" 
+    || state.personal.location.trim() === ""){
+      alert("É vivamente recomendado que preencha os seguintes campos:Nome, Telefone, Localizção")
     return
   }
     else{
@@ -49,8 +49,6 @@ if(state.ExperienceForm.item.cargo.trim() === " "){
   }
     */
 
-
-
   const handlePDF = async () => {
     setExporting(true);
     try {
@@ -60,8 +58,6 @@ if(state.ExperienceForm.item.cargo.trim() === " "){
     }
   };
 
-
-
   return (
     <main className="app-shell">
       <header className="topbar">
@@ -69,7 +65,7 @@ if(state.ExperienceForm.item.cargo.trim() === " "){
           <span className="brand-icon"><FileText size={20} /></span>
           <div>
             <strong>Criador de CV</strong>
-            <small>Crie um currículo profissional em poucos minutos</small>
+            <small>Crie um currículo profissional em poucos</small>
           </div>
 
           <div className="history-buttons">
@@ -110,7 +106,7 @@ if(state.ExperienceForm.item.cargo.trim() === " "){
             <div className="panel-content">
               <TemplateSelector />
               <div className="panel-actions">
-                <button className="primary-btn" onClick={() => go("secoes")}>Próximo: Seções →</button>
+                <button className="primary-btn" onClick= {() => go("secoes")}>Próximo: Seções →</button>
               </div>
             </div>
           )}
@@ -119,7 +115,7 @@ if(state.ExperienceForm.item.cargo.trim() === " "){
             <div className="panel-content">
               <SectionSelector/>
               <div className="panel-actions">
-                <button className="primary-btn" onClick={() => go("dados")}>Próximo: Preencher dados →</button>
+                <button className="primary-btn" onClick= {() => go("dados")}>Próximo: Preencher dados →</button>
               </div>
             </div>
           )}
@@ -136,7 +132,7 @@ if(state.ExperienceForm.item.cargo.trim() === " "){
               <LanguagesForm />
               <CertificatesForm />
               <ProjectsForm />
-              <button className="primary-btn full" onClick = {handlePDF} disabled={exporting}>
+              <button className="primary-btn full" onClick = {verificarName} disabled={exporting}>
                 <Download size={17} />
                 {exporting ? "A preparar PDF..." : "Exportar CV em PDF"}
               </button>

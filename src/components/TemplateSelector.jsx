@@ -26,14 +26,14 @@ export default function TemplateSelector() {
             className={`template-card ${state.template === template.id ? "selected" : ""}`}
             onClick={() => update({ template: template.id })}
           >
-            <div className={`template-thumb ${template.type}`}>
+            <div className = {`template-thumb ${template.type}`}>
               <span />
               <span />
               <span />
               <span />
             </div>
-            <strong>{template.name}</strong>
-            <small>{template.desc}</small>
+            <strong> {template.name} </strong>
+            <small> {template.desc} </small>
           </button>
         ))}
       </div>
@@ -42,11 +42,11 @@ export default function TemplateSelector() {
       <div className="color-dots">
         {colors.map(([color, light]) => (
           <button
-            aria-label={`Cor ${color}`}
-            key={color}
-            className={`color-dot ${state.accent === color ? "selected" : ""}`}
-            style={{ background: color }}
-            onClick={() => update({ accent: color, accentLight: light })}
+            aria-label = {`Cor ${color}`}
+            key = {color}
+            className = {`color-dot ${state.accent === color ? "selected" : ""}`}
+            style = {{ background: color }}
+            onClick = { () => update ({ accent: color, accentLight: light })}
           />
         ))}
       </div>

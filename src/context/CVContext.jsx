@@ -26,7 +26,7 @@ const initialState = {
     formacao: true,
     perfil: true,
     habilidades: true,
-    idiomas: false,
+    idiomas: true,
     certificados: false,
     projetos: false
   },
@@ -48,7 +48,7 @@ export function CVProvider({ children }) {
    const [past, setPaste]= useState([])
 
    //HISTÓRICO FUTURO 
-   const [future, setFuture]=useState([])
+   const [future, setFuture] = useState([])
 
    /*
    MAIN FUNCTION FOR UPDATING  THE CV
@@ -89,7 +89,7 @@ export function CVProvider({ children }) {
   */
   const toggleSection = (name) => {
    changeState({
-      ...state, sections: { ...state.sections, [name]: !prev.sections[name] 
+      ...state, sections: { ...state.sections, [name]: !state.sections[name] 
 
       }
     });
@@ -116,8 +116,10 @@ export function CVProvider({ children }) {
         )
     });
   };
+
 /*REMOVE ITEM  */
-  const removeItem = (key, id) => {
+
+const removeItem = (key, id) => {
     changeState({
       ...state,
       [key]: state[key].filter((item) =>
@@ -126,7 +128,7 @@ export function CVProvider({ children }) {
   };
   /*
   *====================
-  *UNDO
+        ***UNDO
   =====================
   */
   const undo = () =>{
@@ -153,17 +155,17 @@ export function CVProvider({ children }) {
   * REDO
   *================
   */
-const redo = ()=>{
-  if(future.length ===0){
+const redo = ()=> {
+  if(future.length === 0){
     return
   }
   const nextState = future[0]
 
-  setFuture((p) =>
+  setFuture ((p) =>
   p.slice(1)
   )
 
-  setPaste((p) =>[
+  setPaste((p) => [
     ...p, state
   ])
 
@@ -183,7 +185,7 @@ const canRedo = future.length  > 0
 /* 
 *KEYBOARD SHORTCUT
 */
-React.useEffect(() =>{
+React.useEffect(() => {
   const handleKeyBoard = (event) =>{
     //CTRL + Z
     if(

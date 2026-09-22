@@ -1,4 +1,4 @@
-//Formatação do PDF
+///////////PDF GENERATION /////////////////////
 
 import html2canvas from "html2canvas";
 import { jsPDF } from "jspdf";
@@ -12,7 +12,7 @@ export async function exportCVToPDF(elementId, fileName = "meu-cv") {
     useCORS: true,
     backgroundColor: "#ffffff",
     logging: false
-  });
+  } );
 
   const imgData = canvas.toDataURL("image/png");
   const pdf = new jsPDF("p", "mm", "a4");
@@ -26,21 +26,36 @@ export async function exportCVToPDF(elementId, fileName = "meu-cv") {
   if (contentHeight <= pageHeight - margin * 2) {
     pdf.addImage(imgData, "PNG", margin, margin, contentWidth, contentHeight);
   } else {
+
     let sourceY = 0;
+
     const pageContentHeightPx = (pageHeight - margin * 2) / ratio;
     while (sourceY < canvas.height) {
+
       const sliceHeight = Math.min(pageContentHeightPx, canvas.height - sourceY);
+
       const pageCanvas = document.createElement("canvas");
+
       pageCanvas.width = canvas.width;
+
       pageCanvas.height = sliceHeight;
+
       const ctx = pageCanvas.getContext("2d");
+
       ctx.fillStyle = "#fff";
+
       ctx.fillRect(0, 0, pageCanvas.width, pageCanvas.height);
+
       ctx.drawImage(canvas, 0, sourceY, canvas.width, sliceHeight, 0, 0, canvas.width, sliceHeight);
+
       const pageImg = pageCanvas.toDataURL("image/png");
+
       pdf.addImage(pageImg, "PNG", margin, margin, contentWidth, sliceHeight * ratio);
+
       sourceY += sliceHeight;
+
       if (sourceY < canvas.height) pdf.addPage();
+
     }
   }
 

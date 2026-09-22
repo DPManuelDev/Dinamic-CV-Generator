@@ -12,7 +12,7 @@ export default function EducationForm() {
     <FormSection title = "Formação académica">
       {state.education.map((item) => (
         <div className = "entry-card" key = {item.id}>
-          <button className="delete-btn" onClick = {() => removeItem("education", item.id)}>
+          <button className="delete-btn" onClick = {() => removeItem ("education", item.id)}>
             <Trash2 size={15} />
             </button>
           <div className="field-grid">

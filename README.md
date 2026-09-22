@@ -1,6 +1,6 @@
 # CV Builder React
 ## Description 
-Este projecto está a ser desenvolvido para servir como um suporte para pessoas individuais e coletivas na criação de CVs, esta projetada para ter um ambiente amigavel e de facíl manuseiu, onde com a entrada dos seus dados o usuário poder ter um curriculo profissional em menos de 10min. 
+Este projecto está a ser desenvolvido para servir como suporte para pessoas individuais e coletivas na criação de CVs, esta a ser projetada para ter um ambiente amigável e de facíl manuseiu, onde com a entrada dos seus dados o usuário poderá ter um curriculo profissional em menos de 10min. 
 
 ## Principais Caracteristicas
 - 4 templates: Clássico, Moderno, Minimalista e Criativo

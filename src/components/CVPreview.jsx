@@ -16,8 +16,8 @@ export default function CVPreview() {
 
   return (
     <div className="cv-paper-wrap">
-      <div id="cv-print-area" className="cv-paper">
-        <Template state={state} />
+      <div id = "cv-print-area" className="cv-paper">
+        <Template state = {state} />
       </div>
     </div>
   );
