@@ -14,7 +14,9 @@ export function ContactLine({ state, light = false }) {
 
 export function Skills({ text, color, light = false }) {
   if (!text.trim()) return null;
-  return <div className="cv-tags">{text.split(",").map((s, i) => s.trim()).filter(Boolean).map((s, i) => <span key={i} style={{ background: light ? "rgba(255,255,255,.12)" : "#fff", color: light ? "#fff" : color, borderColor: light ? "rgba(255,255,255,.2)" : color }}>{s}</span>)}</div>;
+  return <div className="cv-tags">{text.split(",").map((s, i) => s.trim()).filter(Boolean).map((s, i) => <span key={i} style={{ background: light ? "rgba(255,255,255,.12)" : "#fff", color: light ? "#fff" : color, borderColor: light ? "rgba(255,255,255,.2)" : color }}>{s}
+  </span>)}
+  </div>;
 }
 
 export function Languages({ text }) {

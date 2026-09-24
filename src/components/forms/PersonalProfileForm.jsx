@@ -1,13 +1,13 @@
-import react from "react"
+import React from "react"
 import { useCV } from "../../context/CVContext"
 import FormSection from "./FormSection"
 
 export default function PerfilPessoal() {
 const {state, update} = useCV()
-return
+return(
     <FormSection title= "Perfíl Pessoal" hidden = {!state.sections.perfil}>
         <label >Perfíl <textarea value = {state.profile} placeholder="O teu Perfil" onChange = { e => update({profile: e.target.value})}></textarea>
     </label>
 </FormSection>
-
+)
 }

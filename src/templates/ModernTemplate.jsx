@@ -1,5 +1,6 @@
 import React from "react";
 import { ContactLine, Entries, Languages, SectionTitle, Skills } from "./templateHelpers";
+import { Divide } from "lucide-react";
 
 export default function ModernTemplate({ state }) {
   const { personal: p } = state;
@@ -18,13 +19,23 @@ export default function ModernTemplate({ state }) {
           {state.sections.resumo && state.summary && <section className="cv-summary">{state.summary}</section>}
           <Entries state={state} />
 
-          {state.sections.perfil && state.profile && <section className="cv-summary">{state.profile}</section>}
+          {state.sections.perfil && state.profile && <section className="cv-profile">{state.profile}</section>}
           <Entries state={state} />
         </main>
 
         <aside className="modern-side">
-          {state.sections.habilidades && <div className="side-block"><SectionTitle color={state.accent}>Habilidades</SectionTitle><Skills text={state.skills} color={state.accent} /></div>}
-          {state.sections.idiomas && <div className="side-block"><SectionTitle color={state.accent}>Idiomas</SectionTitle><Languages text={state.languages} /></div>}
+          {state.sections.habilidades && <div className="side-block">
+            <SectionTitle color={state.accent}>Habilidades</SectionTitle>
+            <Skills text={state.skills} color={state.accent} />
+            </div>
+            }
+          {state.sections.idiomas && <div className="side-block">
+            <SectionTitle color={state.accent}>Idiomas</SectionTitle>
+            <Languages text={state.languages} />
+            </div>
+            }
+
+
         </aside>
       </div>
     </div>

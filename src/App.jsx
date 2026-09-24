@@ -13,7 +13,7 @@ import LanguagesForm from "./components/forms/LanguagesForm";
 import CertificatesForm from "./components/forms/CertificatesForm";
 import ProjectsForm from "./components/forms/ProjectsForm";
 import PhotoUpload from "./components/forms/PhotoUpload";
-import PersonalProfileForm from "./components/forms/PersonalProfileForm" 
+import PersonalProfileForm from "./components/forms/PersonalProfileForm.jsx" 
 import CVPreview from "./components/CVPreview";
 import { exportCVToPDF } from "./services/pdfService";
 
@@ -65,7 +65,7 @@ if(state.ExperienceForm.item.cargo.trim() === " "){
           <span className="brand-icon"><FileText size={20} /></span>
           <div>
             <strong>Criador de CV</strong>
-            <small>Crie um currículo profissional em poucos</small>
+            <small>Crie um currículo profissional em poucos minutos</small>
           </div>
 
           <div className="history-buttons">
@@ -143,7 +143,7 @@ if(state.ExperienceForm.item.cargo.trim() === " "){
         <section className="preview-panel">
           <div className="preview-heading">
             <div>
-              <span className="eyebrow"><Eye size={14} /> Pré-visualização</span>
+              <span className="eyebrow"> <Eye size={14} /> Pré-visualização </span>
               <h1>Veja o seu CV enquanto o cria</h1>
             </div>
             <span className="live-badge">Atualização em tempo real</span>

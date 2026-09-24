@@ -3,7 +3,8 @@
     margin:0;
     padding:0
 }
-:root{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;     color:#24232b;
+:root{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; 
+    color:#24232b;
     background:#f4f5f8;
     font-synthesis:none
 }
@@ -82,14 +83,14 @@ margin: 10px;
     margin: 5px;
     border-radius: 5px;
     cursor: pointer;
-    background-color: #f0ebeb;
-    transition: 2s;
+    background-color: #cacacab7;
+    transition: .5s;
     margin-left: auto;
     display: flex;
     
 }
 .btn-undo,.btn-redu:hover{
-     background-color: #5c59594f;
+     background-color: #2b2b2b4f;
 }
 
 .top-download:hover,.primary-btn:hover{filter:brightness(.94);
@@ -99,7 +100,8 @@ margin: 10px;
     cursor:wait;
     transform:none
 }
-.builder{display:grid;
+.builder{
+    display:grid;
     grid-template-columns:380px minmax(0,1fr);
     min-height:calc(100vh - 104px);
     background:#fff;
@@ -115,6 +117,8 @@ margin: 10px;
     border-right:1px solid #e9e9ef;
     overflow:auto;
     max-height: 160vh;
+
+    /*//////////////////////FORMATAÇÃO DOS BOTÕES DE PASSOS: TEMPLATE, SECÇÕES E DADOS//////////////////////*/
 }
 .step-tabs{display:grid;
     grid-template-columns:repeat(3,1fr);
@@ -148,7 +152,9 @@ margin: 10px;
     grid-template-columns:1fr 1fr;
     gap:10px
 }
-.template-card{background:#fff;
+/*////////////////TEMPLATE CARD //////////////*/
+.template-card{
+    background:#fff;
     border:1px solid #e4e3ea;
     border-radius:12px;
     padding:9px;
@@ -159,20 +165,24 @@ margin: 10px;
 .template-card:hover{border-color:#aaa6d9;
     transform:translateY(-1px)
 }
-.template-card.selected{border:2px solid #6c63ff;
+.template-card.selected{
+    border:2px solid #6c63ff;
     padding:8px;
     background:#f8f7ff
 }
-.template-card strong{display:block;
+.template-card strong{
+    display:block;
     font-size:12px;
     margin-top:7px
 }
-.template-card small{display:block;
+.template-card small{
+    display:block;
     color:#92909b;
     font-size:10px;
     margin-top:2px
 }
-.template-thumb{height:74px;
+.template-thumb{
+    height:74px;
     border-radius:7px;
     background:#f2f3f7;
     padding:7px;
@@ -180,7 +190,8 @@ margin: 10px;
     grid-template-columns:1fr 1fr;
     gap:4px
 }
-.template-thumb span{background:#d4d4da;
+.template-thumb span{
+    background:#d4d4da;
     border-radius:2px;
     height:5px
 }
@@ -206,28 +217,37 @@ margin: 10px;
     height:7px;
     background:#222
 }
-.template-thumb.creative{display:flex;flex-wrap:wrap}
-.template-thumb.creative span:first-child{flex-basis:100%;
+.template-thumb.creative{
+    display:flex;
+    flex-wrap:wrap
+}
+.template-thumb.creative span:first-child{
+    flex-basis:100%;
     height:16px;
     background:linear-gradient(90deg,#6c63ff,#d4537e)
 }
-.template-thumb.creative span:nth-child(2){width:28%;
+.template-thumb.creative span:nth-child(2){
+    width:28%;
     height:43px;
     background:#eeedff
 }
+/*///////////////////////FORMATAÇÃO DAS CORES DE DESTAQUE///////////////*/
 .color-dots{display:flex;
     gap:8px;
     flex-wrap:wrap
 }
-.color-dot{width:23px;
+.color-dot{
+    width:23px;
     height:23px;
     border-radius:50%;
     cursor:pointer;
     border:3px solid transparent
 }
-.color-dot.selected{outline:2px solid #222;
+.color-dot.selected{
+    outline:2px solid #222;
     outline-offset:2px
 }
+/*/////////////////////////////////////////////////////*/
 .panel-actions{margin-top:18px}
 .full{width:100%;
     margin-top:18px
@@ -286,6 +306,7 @@ margin: 10px;
     display:grid;
     gap:8px
 }
+/*///////////////////FORMATAÇÃO DOS INPUTS//////////////////////////*/
 .field-grid input,.field-grid textarea,.form-section>label textarea{
     width:100%;
     border:1px solid #dedde5;
@@ -297,83 +318,89 @@ margin: 10px;
     margin-top:4px
 }
 .field-grid textarea,.form-section>label textarea{
-    min-height:70px;
+    min-height:50px;
     resize:vertical
 }
     
-    .field-help{
+.field-help{
         font-size:10px;
         color:#999
-    }
-    .entry-card{
-        position:relative;
-        background:#fff;
-        border:1px solid #e5e4ea;
-        border-radius:10px;
-        padding:12px;
-        margin-bottom:9px
-    }
-    .delete-btn{position:absolute;
-        right:7px;
-        top:7px;
-        width:28px;
-        height:28px;
-        border-radius:8px;
-        background:#fff0f1;
-        color:#c74d5a;
-        display:grid;
-        place-items:center;
-        cursor:pointer
-    }
-    .add-btn{
-        display:inline-flex;
-        align-items:center;
-        gap:5px;
-        background:transparent;
-        color:#6c63ff;
-        font-size:11px;
-        font-weight:800;
-        cursor:pointer;
-        margin-top:3px
-    }
+}
+.entry-card{
+    position:relative;
+    background:#fff;
+    border:1px solid #e5e4ea;
+    border-radius:10px;
+    padding:12px;
+    margin-bottom:9px
+}
+
+/*////////////////   FORMATAÇÃO DO BOTÃO DELETE  /////////////////////*/
+.delete-btn{position:absolute;
+    right:7px;
+    top:7px;
+    width:28px;
+    height:28px;
+    border-radius:8px;
+    background:#fff0f1;
+    color:#c74d5a;
+    display:grid;
+    place-items:center;
+    cursor:pointer
+}
+/*/////////////// FORMATAÇÃO DO BOTÃO ADD ////////////////*/
+.add-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:5px;
+    background:transparent;
+    color:#6c63ff;
+    font-size:11px;
+    font-weight:800;
+    cursor:pointer;
+    margin-top:3px
+}
     /*////////////////PHOTO BOX FORMATING/////////////////////*/
-    .photo-box{
-        display:grid;
-        grid-template-columns:64px 1fr;
-        gap:8px;
-        align-items:center
-    }
-    .photo-box img,.photo-placeholder{width:64px;
-        height:64px;
-        border-radius:12px;
-        object-fit:cover;
-        border:1px solid #dedde5
-    }
-    .photo-placeholder{display:grid;
-        place-items:center;
-        color:#96949f;
-        background:#f5f4f8
-    }
-    .photo-placeholder span{font-size:8px}
-    .upload-btn{background:#fff!important;
-        border:1px solid #dedde5;
-        border-radius:9px;
-        padding:9px 10px;
-        text-align:center;
-        cursor:pointer;
-        color:#45434d!important
-    }
-    .remove-photo{
-        grid-column:2;
-        width:max-content;
-        background:transparent;
-        color:#c74d5a;
-        font-size:10px;
-        display:flex;
-        gap:4px;
-        align-items:center;
-        cursor:pointer
-    }
+.photo-box{
+    display:grid;
+    grid-template-columns:64px 1fr;
+    gap:8px;
+    align-items:center
+}
+.photo-box img,.photo-placeholder{
+    width:64px;
+    height:64px;
+    border-radius:12px;
+    object-fit:cover;
+    border:1px solid #dedde5
+}
+.photo-placeholder{
+    display:grid;
+    place-items:center;
+    color:#96949f;
+    background:#f5f4f8
+}
+.photo-placeholder span{font-size:8px}
+
+.upload-btn{background:#fff!important;
+    border:1px solid #dedde5;
+    border-radius:9px;
+    padding:9px 10px;
+    text-align:center;
+    cursor:pointer;
+    color:#45434d!important
+}
+.remove-photo{
+    grid-column:2;
+    width:max-content;
+    background:transparent;
+    color:#c74d5a;
+    font-size:10px;
+    display:flex;
+    gap:4px;
+    align-items:center;
+    cursor:pointer
+}
     /*////////////////PREVIEW PANEL FORMATING//////////////////////*/
 .preview-panel{
     background:#f2f3f7;
@@ -397,10 +424,11 @@ margin: 10px;
     letter-spacing:.08em
 }
 .preview-heading h1{
-    font-size:18px;
+    font-size:14px;
     margin-top:5px
 }
-.live-badge{background:#fff;
+.live-badge{
+    background:#fff;
     border:1px solid #e5e4ea;
     color:#7b7984;
     border-radius:999px;
@@ -413,6 +441,9 @@ margin: 10px;
     justify-content:center;
     padding:18px
 }
+
+/*/////////////GENERAL CV FORMATTING////////////////*/
+
 .cv-paper-wrap{width:min(100%,850px)}
 .cv-paper{
     background:#fff;
@@ -422,13 +453,14 @@ margin: 10px;
     box-shadow:0 18px 45px rgba(28,28,35,.14);
     transform-origin:top center
 }
-/*/////////////General CV FORMATTING////////////////*/
-.cv{width:100%;
+
+.cv{
+    width:100%;
     min-height:1123px;
     background:#fff;
     color:#27262c;
     font-family:Arial,sans-serif;
-    font-size:12px
+    font-size:14px
 }
 .cv-name{
     font-size:23px;
@@ -440,30 +472,33 @@ margin: 10px;
     color:#6f6d77;
     margin-top:5px
 }
-.cv-photo{width:78px;
-    height:78px;
+.cv-photo{
+    width:160px;
+    height: 160px;
     border-radius:50%;
     object-fit:cover;
     display:block
 }
-.initials{display:grid;
+.initials{
+    display:grid;
     place-items:center;
     background:#6c63ff;
     color:#fff;
     font-size:28px;
     font-weight:800
 }
-.cv-contact{display:flex;
+.cv-contact{
+    display:flex;
     flex-wrap:wrap;
     gap:5px 14px;
-    font-size:12px;
+    font-size:14px;
     color:#777580;
     margin-top:9px
 }
 .cv-contact.light{color:rgba(255,255,255,.82)}
 .cv-section{margin-bottom:22px}
 .cv-section-title{
-    font-size:12px;
+    font-size:18px;
     text-transform:uppercase;
     letter-spacing:.12em;
     margin-bottom:10px;
@@ -478,13 +513,22 @@ margin: 10px;
     padding-bottom:5px
 }
 .cv-summary{
-    font-size:10.5px;
+    font-size:13.5px;
     line-height:1.7;
     color:#5f5d66;
     margin-bottom:20px;
     padding-bottom:13px;
     border-bottom:1px solid #eee
 }
+.cv-profile{
+    font-size: 13.5px;
+    line-height:1.7;
+    color: #5f5d66;
+    margin-bottom:20px;
+    padding-bottom: 13px;
+    border-bottom: 1px solid #eee;
+}
+
 .cv-entry{margin-bottom:13px}
 
 .cv-entry-head{
@@ -494,14 +538,17 @@ margin: 10px;
     align-items:baseline
 }
 .cv-entry-head strong{font-size:11px}
-.cv-entry-head span{font-size:9px;color:#999}
-.cv-entry-company{
+.cv-entry-head span{
     font-size:11px;
+    color:#999
+}
+.cv-entry-company{
+    font-size:13.5px;
     font-weight:700;
     margin-top:2px
 }
 .cv-entry p{
-    font-size:9.5px;
+    font-size:13.5px;
     line-height:1.55;
     color:#666;
     margin-top:4px
@@ -512,7 +559,8 @@ margin: 10px;
     gap:4px
 }
 
-.cv-tags span{font-size:9px;
+.cv-tags span{
+    font-size:13.5px;
     padding:4px 7px;
     border-radius:999px;
     border:1px solid
@@ -522,31 +570,39 @@ margin: 10px;
     color:#555
 }
 .cv-list li{
-    font-size:10px;
+    font-size:13.5px;
     margin-bottom:4px
 }
-.side-block{margin-top:22px}
+.side-block{margin-top: 22px}
+
+/*///////////////////// CLASSIC TEMPLATE FORMATTING //////////////////////*/
 .classic{display:grid;
     grid-template-columns:30% 70%
 }
-.classic-side{background:#292927;
+.classic-side{
+    background:#292927;
     color:#fff;
-    padding:38px 24px
+    padding:38px 20px
 }
 .classic-side .cv-photo{margin:0 auto 14px}
 .classic-side .cv-name{
     text-align:center;
     font-size:18px
 }
-.classic-side .cv-title{text-align:center;color:#aaa}
+.classic-side .cv-title{
+    text-align:center;
+    color:#aaa
+}
 .classic-side .cv-contact{
     display:grid;
     gap:7px;
     margin-top:18px
 }
-.classic-side .cv-section-title{font-size:9px}
+.classic-side .cv-section-title{font-size:14px}
 .classic-side .cv-list{color:#d0d0d0}
 .classic-main{padding:38px 30px}
+
+/*//////////////////// MODERN TEMPLATE FORMATTING /////////////////*/
 .modern-head{
     padding:38px 42px;
     color:#fff;
@@ -556,43 +612,59 @@ margin: 10px;
 }
 .modern-head .cv-title{color:rgba(255,255,255,.8)}
 .modern-head .cv-contact{color:rgba(255,255,255,.8)}
-.modern-photo{width:82px;height:82px}
-.modern-grid{display:grid;
+.modern-photo{width:120px;height:120px}
+.modern-grid{
+    display:grid;
     grid-template-columns:1fr 235px
 }
 .modern-grid main{padding:30px 34px}
-.modern-side{background:#fafafa;
+.modern-side{
+    background:#fafafa;
     padding:30px 20px;
     border-left:1px solid #eee
 }
+
+/*/////////////////////// MINIMAL  TEMPLATE FORMATTING /////////////////////////////////*/
 .minimal{padding:44px 50px}
-.minimal-head{display:flex;
+.minimal-head{
+    display:flex;
     gap:18px;
     align-items:center;
     border-bottom:2px solid #222;
     padding-bottom:17px;
     margin-bottom:23px
 }
-.minimal-photo{width:76px;height:76px}
+.minimal-photo{
+    width:100px;
+    height:100px
+}
 .minimal-bottom{
     display:grid;
     grid-template-columns:1fr 1fr;
     gap:25px
 }
-.creative-head{padding:35px 40px;
+
+/*/////////////////// CRETIVE TEMPLATE FORMATTING /////////////////*/
+.creative-head{
+    padding:35px 40px;
     color:#fff;
     display:flex;
     align-items:center;
     gap:20px
 }
-.creative-photo{width:82px;
-    height:82px;
+.creative-photo{
+    width:110px;
+    height:110px;
     border:3px solid rgba(255,255,255,.35)
 }
     .creative-initial{background:rgba(255,255,255,.22)}
     .creative-head .cv-title{color:rgba(255,255,255,.8)}
-    .creative-grid{display:grid;grid-template-columns:31% 69%}
-    .creative-side{background:#f1efff;padding:30px 20px}
+    .creative-grid{display:grid;
+        grid-template-columns:31% 69%
+    }
+    .creative-side{background:#f1efff;
+        padding:30px 20px
+    }
     .creative-grid main{padding:30px 28px}
 @media(max-width:1050px){.builder{grid-template-columns:330px 1fr}
 .cv-paper{transform:scale(.88);
@@ -631,8 +703,11 @@ margin: 10px;
     body{background:#fff}
     .app-shell{padding:0}
     .topbar,.sidebar,.preview-heading{display:none}
-    .builder{display:block;border:0;box-shadow:none}
-    .preview-panel{padding:0;background:#fff}
+    .builder{display:block;
+        border:0;
+        box-shadow:none}
+    .preview-panel{padding:0;
+        background:#fff}
     .preview-stage{padding:0}
     .cv-paper{
         box-shadow:none;

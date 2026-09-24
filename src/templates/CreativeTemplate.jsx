@@ -1,5 +1,6 @@
 import React from "react";
 import { ContactLine, Entries, Languages, SectionTitle, Skills } from "./templateHelpers";
+import { Section } from "lucide-react";
 
 export default function CreativeTemplate({ state }) {
   const { personal: p } = state;
@@ -15,12 +16,23 @@ export default function CreativeTemplate({ state }) {
       </header>
       <div className="creative-grid">
         <aside className="creative-side">
-          {state.sections.habilidades && <div className="side-block"><SectionTitle color={state.accent}>Habilidades</SectionTitle><Skills text={state.skills} color={state.accent} /></div>}
-          {state.sections.idiomas && <div className="side-block"><SectionTitle color={state.accent}>Idiomas</SectionTitle><Languages text={state.languages} /></div>}
+          {state.sections.habilidades && <div className="side-block"><SectionTitle color={state.accent}>Habilidades</SectionTitle>
+          <Skills text={state.skills} color={state.accent} />
+          </div>
+          }
+          {state.sections.idiomas && <div className="side-block">
+            <SectionTitle color={state.accent}>Idiomas</SectionTitle>
+            <Languages text={state.languages} />
+            </div>
+            }
         </aside>
         <main>
           {state.sections.resumo && state.summary && <section className="cv-summary">{state.summary}</section>}
           <Entries state={state} />
+
+          {state.sections.perfil && state.profile && <section className="cv-profile">{state.profile}</section>} 
+          <Entries state ={state}/>
+
         </main>
       </div>
     </div>

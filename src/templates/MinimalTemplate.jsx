@@ -16,7 +16,7 @@ export default function MinimalTemplate({ state }) {
       {state.sections.resumo && state.summary && <section className="cv-summary"> {state.summary}</section>}
       <Entries state={state} />
 
-      {state.sections.perfil && state.profile && <section className="cv-summary"> {state.summary}</section>}
+      {state.sections.perfil && state.profile && <section className="cv-profile"> {state.profile}</section>}
       <Entries state={state} />
 
       <div className="minimal-bottom">

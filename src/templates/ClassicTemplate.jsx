@@ -10,12 +10,18 @@ export default function ClassicTemplate({ state }) {
         <div className="cv-name">{p.name || "Seu Nome"}</div>
         <div className="cv-title">{p.title || "Cargo / Título"}</div>
         <ContactLine state={state} light />
-        {state.sections.habilidades && <div className="side-block"><SectionTitle color="#fff">Habilidades</SectionTitle><Skills text={state.skills} color={state.accent} light /></div>}
+        {state.sections.habilidades && <div className="side-block">
+          <SectionTitle color="#fff">Habilidades</SectionTitle>
+          <Skills text={state.skills} color={state.accent} light />
+          </div>
+          }
         {state.sections.idiomas && <div className="side-block"><SectionTitle color="#fff">Idiomas</SectionTitle><Languages text={state.languages} /></div>}
       </aside>
       <div className="classic-main">
         {state.sections.resumo && state.summary && <section className="cv-summary" style={{ borderColor: state.accentLight }}>{state.summary}</section>}
         <Entries state={state} />
+
+        {state.sections.perfil && state.profile && <section  className="cv-profile" style={{borderColor: state.accentLight}}>{state.profile}</section>}
       </div>
     </div>
   );
