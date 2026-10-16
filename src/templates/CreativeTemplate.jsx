@@ -7,7 +7,7 @@ export default function CreativeTemplate({ state }) {
   return (
     <div className="cv creative">
       <header className="creative-head" style={{ background: `linear-gradient(135deg, ${state.accent}, #D4537E)` }}>
-        {state.photo ? <img className="cv-photo creative-photo" src={state.photo} alt="" /> : <div className="cv-photo initials creative-initial">{(p.name || "S").charAt(0).toUpperCase()}</div>}
+        {state.photo ? <img className="cv-photo creative-photo" src={state.photo} alt=""/> : <div className="cv-photo initials creative-initial">{( "c.v").toUpperCase()}</div>}
         <div>
           <div className="cv-name">{p.name || "Seu Nome"}</div>
           <div className="cv-title">{p.title || "Cargo / Título"}</div>

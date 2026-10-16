@@ -38,7 +38,8 @@ export default function App() {
     else{
       handlePDF()
     }
-  }/*
+  }
+  /*
 function VerifyExperience(){
 if(state.ExperienceForm.item.cargo.trim() === " "){
   alert("O teu CV deve ter no minimo uma experincia de Trabalho")

@@ -16,12 +16,10 @@ app.post( "/build", (req, res) => {
 res.send("deu certo")
 })
 
-
 app.get("/user", (req, res) =>{
     res.json(user)
     console.log("pegou")
 })
-
 
 /*
 app.get("/", (req,res) => {

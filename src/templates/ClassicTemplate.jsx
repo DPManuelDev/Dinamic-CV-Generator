@@ -6,7 +6,9 @@ export default function ClassicTemplate({ state }) {
   return (
     <div className="cv classic">
       <aside className="classic-side">
-        {state.photo ? <img className="cv-photo" src={state.photo} alt="" /> : <div className="cv-photo initials">{(p.name || "S").charAt(0).toUpperCase()}</div>}
+        {state.photo ? <img className="cv-photo" src={state.photo} alt=""/> :<div className="cv-photo initials">{("C.V").toUpperCase()}
+          </div>
+          }
         <div className="cv-name">{p.name || "Seu Nome"}</div>
         <div className="cv-title">{p.title || "Cargo / Título"}</div>
         <ContactLine state={state} light />

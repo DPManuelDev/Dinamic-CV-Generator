@@ -56,6 +56,8 @@ button:focus-visible,input:focus-visible,textarea:focus-visible{
     font-size:11px;
     margin-top:2px
 }
+
+/*///////////////////////DOWNLOAD BUTTON FORMATING///////////////////////*/
 .top-download,.primary-btn{
     background:#6c63ff;
     color:#fff;
@@ -72,11 +74,22 @@ button:focus-visible,input:focus-visible,textarea:focus-visible{
 .top-download{
      margin-left: 700px;
 }
+
+.top-download:hover,.primary-btn:hover{filter:brightness(.94);
+    transform:translateY(-1px)
+}
+.top-download:disabled,.primary-btn:disabled{opacity:.65;
+    cursor:wait;
+    transform:none
+}
+
 .history-buttons{
 padding: auto;
 margin: 10px;
 
 }
+
+/* BUTTONS UNDO & REDO FORMATING*/
 .btn-undo,.btn-redu{
     gap: 5px;
     padding: 2px;
@@ -93,13 +106,7 @@ margin: 10px;
      background-color: #2b2b2b4f;
 }
 
-.top-download:hover,.primary-btn:hover{filter:brightness(.94);
-    transform:translateY(-1px)
-}
-.top-download:disabled,.primary-btn:disabled{opacity:.65;
-    cursor:wait;
-    transform:none
-}
+
 .builder{
     display:grid;
     grid-template-columns:380px minmax(0,1fr);
@@ -118,7 +125,7 @@ margin: 10px;
     overflow:auto;
     max-height: 160vh;
 
-    /*//////////////////////FORMATAÇÃO DOS BOTÕES DE PASSOS: TEMPLATE, SECÇÕES E DADOS//////////////////////*/
+    /*////////////////////// STEPS BUTTONS FORMATING :SECTIONS, TEMPLATE DATA //////////////////////*/
 }
 .step-tabs{display:grid;
     grid-template-columns:repeat(3,1fr);
@@ -152,7 +159,7 @@ margin: 10px;
     grid-template-columns:1fr 1fr;
     gap:10px
 }
-/*////////////////TEMPLATE CARD //////////////*/
+/*//////////////// TEMPLATE CARD //////////////*/
 .template-card{
     background:#fff;
     border:1px solid #e4e3ea;
@@ -231,7 +238,7 @@ margin: 10px;
     height:43px;
     background:#eeedff
 }
-/*///////////////////////FORMATAÇÃO DAS CORES DE DESTAQUE///////////////*/
+/*/////////////////////// COLOR FOMATING //////////////*/
 .color-dots{display:flex;
     gap:8px;
     flex-wrap:wrap
@@ -306,7 +313,7 @@ margin: 10px;
     display:grid;
     gap:8px
 }
-/*///////////////////FORMATAÇÃO DOS INPUTS//////////////////////////*/
+/*/////////////////// GENERAL INPUT FORMATING //////////////////////////*/
 .field-grid input,.field-grid textarea,.form-section>label textarea{
     width:100%;
     border:1px solid #dedde5;
@@ -335,7 +342,7 @@ margin: 10px;
     margin-bottom:9px
 }
 
-/*////////////////   FORMATAÇÃO DO BOTÃO DELETE  /////////////////////*/
+/*////////////////   DELETE BUTTON FOMATING  /////////////////////*/
 .delete-btn{position:absolute;
     right:7px;
     top:7px;
@@ -348,7 +355,7 @@ margin: 10px;
     place-items:center;
     cursor:pointer
 }
-/*/////////////// FORMATAÇÃO DO BOTÃO ADD ////////////////*/
+/*/////////////// ADD BUTTON  FORMATING ////////////////*/
 .add-btn{
     display:inline-flex;
     align-items:center;
@@ -360,7 +367,7 @@ margin: 10px;
     cursor:pointer;
     margin-top:3px
 }
-    /*////////////////PHOTO BOX FORMATING/////////////////////*/
+    /*//////////////// PHOTO BOX FORMATING /////////////////////*/
 .photo-box{
     display:grid;
     grid-template-columns:64px 1fr;
@@ -401,7 +408,7 @@ margin: 10px;
     align-items:center;
     cursor:pointer
 }
-    /*////////////////PREVIEW PANEL FORMATING//////////////////////*/
+    /*//////////////// PREVIEW PANEL FORMATING //////////////////////*/
 .preview-panel{
     background:#f2f3f7;
     overflow:auto;
@@ -575,96 +582,7 @@ margin: 10px;
 }
 .side-block{margin-top: 22px}
 
-/*///////////////////// CLASSIC TEMPLATE FORMATTING //////////////////////*/
-.classic{display:grid;
-    grid-template-columns:30% 70%
-}
-.classic-side{
-    background:#292927;
-    color:#fff;
-    padding:38px 20px
-}
-.classic-side .cv-photo{margin:0 auto 14px}
-.classic-side .cv-name{
-    text-align:center;
-    font-size:18px
-}
-.classic-side .cv-title{
-    text-align:center;
-    color:#aaa
-}
-.classic-side .cv-contact{
-    display:grid;
-    gap:7px;
-    margin-top:18px
-}
-.classic-side .cv-section-title{font-size:14px}
-.classic-side .cv-list{color:#d0d0d0}
-.classic-main{padding:38px 30px}
 
-/*//////////////////// MODERN TEMPLATE FORMATTING /////////////////*/
-.modern-head{
-    padding:38px 42px;
-    color:#fff;
-    display:flex;
-    justify-content:space-between;
-    align-items:center
-}
-.modern-head .cv-title{color:rgba(255,255,255,.8)}
-.modern-head .cv-contact{color:rgba(255,255,255,.8)}
-.modern-photo{width:120px;height:120px}
-.modern-grid{
-    display:grid;
-    grid-template-columns:1fr 235px
-}
-.modern-grid main{padding:30px 34px}
-.modern-side{
-    background:#fafafa;
-    padding:30px 20px;
-    border-left:1px solid #eee
-}
-
-/*/////////////////////// MINIMAL  TEMPLATE FORMATTING /////////////////////////////////*/
-.minimal{padding:44px 50px}
-.minimal-head{
-    display:flex;
-    gap:18px;
-    align-items:center;
-    border-bottom:2px solid #222;
-    padding-bottom:17px;
-    margin-bottom:23px
-}
-.minimal-photo{
-    width:100px;
-    height:100px
-}
-.minimal-bottom{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:25px
-}
-
-/*/////////////////// CRETIVE TEMPLATE FORMATTING /////////////////*/
-.creative-head{
-    padding:35px 40px;
-    color:#fff;
-    display:flex;
-    align-items:center;
-    gap:20px
-}
-.creative-photo{
-    width:110px;
-    height:110px;
-    border:3px solid rgba(255,255,255,.35)
-}
-    .creative-initial{background:rgba(255,255,255,.22)}
-    .creative-head .cv-title{color:rgba(255,255,255,.8)}
-    .creative-grid{display:grid;
-        grid-template-columns:31% 69%
-    }
-    .creative-side{background:#f1efff;
-        padding:30px 20px
-    }
     .creative-grid main{padding:30px 28px}
 @media(max-width:1050px){.builder{grid-template-columns:330px 1fr}
 .cv-paper{transform:scale(.88);

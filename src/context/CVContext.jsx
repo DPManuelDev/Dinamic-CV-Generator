@@ -6,6 +6,7 @@ const initialState = {
   template: "classico",
   accent: "#6C63FF",
   accentLight: "#EEEDFF",
+
   personal: {
     name: "",
     title: "",
@@ -39,7 +40,7 @@ const initialState = {
 const CVContext = createContext(null);
 
 export function CVProvider({ children }) {
- //////////////// //ESTADO ACTUAL DO CV //////////////////
+ //////////////// // ESTADO ACTUAL DO CV //////////////////
 
   const [state, setState] = useState(initialState);
 
@@ -58,7 +59,7 @@ export function CVProvider({ children }) {
 
     setState(newState)
 
-    ///////////whatever alteration will delete the redo
+    ///////////whatever alteration will delete the redo/////////////
 
     setFuture([])
   }
@@ -72,7 +73,7 @@ export function CVProvider({ children }) {
   };
 
  /*
- *PERSONAL DATA ACTUALIZATION
+ *PERSONAL DATA UPDATE
  */
 
   const updatePersonal = (field, value) => {

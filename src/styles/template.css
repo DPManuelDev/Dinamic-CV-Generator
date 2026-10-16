@@ -1,0 +1,90 @@
+/*///////////////////// CLASSIC TEMPLATE FORMATTING //////////////////////*/
+.classic{display:grid;
+    grid-template-columns:30% 70%
+}
+.classic-side{
+    background:#292927;
+    color:#fff;
+    padding:38px 20px
+}
+.classic-side .cv-photo{margin:0 auto 14px}
+.classic-side .cv-name{
+    text-align:center;
+    font-size:18px
+}
+.classic-side .cv-title{
+    text-align:center;
+    color:#aaa
+}
+.classic-side .cv-contact{
+    display:grid;
+    gap:7px;
+    margin-top:18px
+}
+.classic-side .cv-section-title{font-size:14px}
+.classic-side .cv-list{color:#d0d0d0}
+.classic-main{padding:38px 30px}
+
+/*//////////////////// MODERN TEMPLATE FORMATTING /////////////////*/
+.modern-head{
+    padding:38px 42px;
+    color:#fff;
+    display:flex;
+    justify-content:space-between;
+    align-items:center
+}
+.modern-head .cv-title{color:rgba(255,255,255,.8)}
+.modern-head .cv-contact{color:rgba(255,255,255,.8)}
+.modern-photo{width:120px;height:120px}
+.modern-grid{
+    display:grid;
+    grid-template-columns:1fr 235px
+}
+.modern-grid main{padding:30px 34px}
+.modern-side{
+    background:#fafafa;
+    padding:30px 20px;
+    border-left:1px solid #eee
+}
+
+/*/////////////////////// MINIMAL  TEMPLATE FORMATTING /////////////////////////////////*/
+.minimal{padding:44px 50px}
+.minimal-head{
+    display:flex;
+    gap:18px;
+    align-items:center;
+    border-bottom:2px solid #222;
+    padding-bottom:17px;
+    margin-bottom:23px
+}
+.minimal-photo{
+    width:110px;
+    height:110px
+}
+.minimal-bottom{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px
+}
+
+/*/////////////////// CRETIVE TEMPLATE FORMATTING /////////////////*/
+.creative-head{
+    padding:35px 40px;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    gap:20px
+}
+.creative-photo{
+    width:110px;
+    height:110px;
+    border:3px solid rgba(255,255,255,.35)
+}
+    .creative-initial{background:rgba(255,255,255,.22)}
+    .creative-head .cv-title{color:rgba(255,255,255,.8)}
+    .creative-grid{display:grid;
+        grid-template-columns:31% 69%
+    }
+    .creative-side{background:#f1efff;
+        padding:30px 20px
+    }
