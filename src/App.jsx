@@ -29,7 +29,7 @@ export default function App() {
 
   const go = (next) => setTab(next);
 
-  function verificarName(){
+  /*function verificarName(){
     if(state.personal.name.trim() ==="" || state.personal.phone.trim()==="" 
     || state.personal.location.trim() === ""){
       alert("É vivamente recomendado que preencha os seguintes campos:Nome, Telefone, Localizção")
@@ -49,9 +49,10 @@ if(state.ExperienceForm.item.cargo.trim() === " "){
     handlePDF
   }
     */
-
+//Funcional
   const handlePDF = async () => {
-    setExporting(true);
+
+  setExporting(true);
     try {
       await exportCVToPDF("cv-print-area", state.personal.name || "meu-cv" );
     } finally {
@@ -59,6 +60,28 @@ if(state.ExperienceForm.item.cargo.trim() === " "){
     }
   };
 
+
+/*/ESPERIMENTO
+const handlePDF = () => {
+  const errosFormularios = validarFormulario()
+
+  if (Object.keys(errosFormularios).length > 0){
+    setErros(errosFormularios)
+    return
+  }
+  
+  const handlePDF = async () => {
+
+  setExporting(true);
+    try {
+      await exportCVToPDF("cv-print-area", state.personal.name || "meu-cv" );
+    } finally {
+      setExporting(false);
+    }
+  };
+
+}
+*/
   return (
     <main className="app-shell">
       <header className="topbar">
@@ -81,7 +104,7 @@ if(state.ExperienceForm.item.cargo.trim() === " "){
        
         </div>
         
-        <button className="top-download" disabled={exporting}  onClick={verificarName}>
+        <button className="top-download" disabled={exporting}  onClick={handlePDF}>
           <Download size={17} />
           {exporting ? "A preparar..." : "Baixar PDF"}
         </button>
@@ -133,7 +156,7 @@ if(state.ExperienceForm.item.cargo.trim() === " "){
               <LanguagesForm />
               <CertificatesForm />
               <ProjectsForm />
-              <button className="primary-btn full" onClick = {verificarName} disabled={exporting}>
+              <button className="primary-btn full" onClick = {handlePDF} disabled={exporting}>
                 <Download size={17} />
                 {exporting ? "A preparar PDF..." : "Exportar CV em PDF"}
               </button>
@@ -157,3 +180,6 @@ if(state.ExperienceForm.item.cargo.trim() === " "){
     </main>
   );
 }
+
+
+

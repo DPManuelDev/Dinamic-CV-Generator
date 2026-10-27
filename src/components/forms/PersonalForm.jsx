@@ -3,30 +3,26 @@ import { useState } from "react";
 import { useCV } from "../../context/CVContext";
 import FormSection from "./FormSection";
 
-
 export default function PersonalForm() {
   const { state, updatePersonal } = useCV();
   if (!state.sections.pessoal) return null;
   const p = state.personal;
 
   ////////////////////////////////////
-  const emailValidator = (e) => {
-    const email = e.target.value
+  const validarEmail = (email) => {
+    if (!email) return true // email é opcional
+    
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
-    if (!regex.test(email)) {
-      const setErro = ("Digite um e-mail válido.")
-      alert("email Inválido")
-      return
-
+      return regex.test(email)
     }
-    alert("E-mail válido")
-  }
-  ///////////////////////////////////////
+
+  
 
   return (
     <FormSection title="Dados pessoais">
       <div className="field-grid">
+
         <label>Nome completo<input value={p.name} placeholder="Ex: Maria Silva" onChange={e => updatePersonal("name", e.target.value)} required />
         </label>
 
@@ -34,11 +30,16 @@ export default function PersonalForm() {
         </label>
 
         <label > Email <input id="email-imput" type="email" value={p.email}
-          placeholder="exemplo@gmail.com" onChange={e => updatePersonal("email", e.target.value)} required
+          placeholder="exemplo@gmail.com" onChange={e => updatePersonal("email", e.target.value)} onBlur={(e) => {
+            if( e.target.value && !validarEmail(e.target.value)
+            ){ alert("Digite um e-mail válido")
+          }
+          }
+        } 
         />
         </label>
 
-        <label>Telefone <input value={p.phone} placeholder="+244 900 000 000" onChange={e => updatePersonal("phone", e.target.value)} required />
+        <label>Telefone <input type="tel" inputMode ="numeric"value={p.phone} placeholder="+244 900 000 000" onChange={e => updatePersonal("phone", e.target.value)} required />
         </label>
         <label>Localização<input value={p.location} placeholder="Luanda, Angola" onChange={e => updatePersonal("location", e.target.value)} required />
         </label>
@@ -48,4 +49,6 @@ export default function PersonalForm() {
       </div>
     </FormSection>
   );
+
+
 }
